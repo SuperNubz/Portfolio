@@ -1,0 +1,77 @@
+@font-face {
+    font-family:Aragandir ;
+    src: url(Agrandir/Agrandir-WideLight.otf);
+}
+
+@media(max-width: 600px){
+    html{
+        font-size: 12px;
+    }
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Aragandir;
+}
+
+body > section > div{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 10vh;
+}
+
+body > section{
+    height: 100vh;
+}
+
+.nav-bar{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    /* border: 2px solid black; */
+    display: flex;
+    background-color: #2E2C2F;
+    position:fixed;
+    width: 80vw;
+    height: 3vh;
+}
+
+.nav-bar > .nav-bar-element{
+    /* border: 2px solid red; */
+    flex: 1 1 auto;
+    text-align: center;
+    /* vertical-align: middle; */
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.nav-bar > .nav-bar-element > a{
+    color:#F3E8EE;
+}
+
+.introduction-section{
+    /* padding-top: 1vh; */
+    background-color: #2E2C2F;
+}
+
+.introduction-section-wrapper{
+
+}
+
+.introduction-area{
+    border: 1px solid white;
+    color:#F3E8EE;
+    height: 80vh;
+    display: flex;
+}
+
+.introduction-area > .introduction-area-content{
+    border: 1px solid red;
+}
+
+.introduction-area > .introduction-area-picture{
+    border:1px solid green;
+}
+
