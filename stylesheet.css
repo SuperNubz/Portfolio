@@ -1,6 +1,15 @@
 @font-face {
-    font-family:Aragandir ;
+    font-family:Aragandir-GrandLight ;
     src: url(Agrandir/Agrandir-GrandLight.otf);
+
+    /* font-family: Aragandir-GrandHeavy;
+    src:url(Agrandir/Agrandir-GrandHeavy.otf); */
+
+    /* font-family: Aragandir-Narrow;
+    src:url(Agrandir/Agrandir-Narrow.otf); */
+
+    /* font-family: Aragandir-Regular;
+    src:url(Agrandir/Agrandir-Regular.otf); */
 }
 
 @media(max-width: 600px){
@@ -12,7 +21,8 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: Aragandir;
+    font-family: Aragandir-GrandLight;
+    font-weight: 100;
 }
 
 body > section > div{
@@ -49,6 +59,10 @@ body > section{
 
 .nav-bar > .nav-bar-element > a{
     color:#F3E8EE;
+}
+
+a:link{
+    text-decoration: none;
 }
 
 .introduction-section{
@@ -94,14 +108,18 @@ body > section{
     display: block;
 }
 
-.works-separator{
+.separator{
     /* border:1px solid red; */
     text-align: center;
     height: 10vh;
     line-height: 12vh;
 }
 
-.embedded-area{
+.light-section{
+    background-color: #F3E8EE;
+}
+
+.light-section-area{
     border: 1px solid #2E2C2F;
     color:#2E2C2F;
     height: 60vh;
@@ -113,7 +131,7 @@ body > section{
     gap:3vh
 }
 
-.embedded-area > .embedded-area-content{
+.light-section-area > .light-section-content{
     border: 1px solid red;
     /* flex: 1 1 auto; */
     box-sizing: border-box;
@@ -121,7 +139,7 @@ body > section{
     width: 60%;
 }
 
-.embedded-area > .embedded-area-picture{
+.light-section-area > .light-section-img{
     box-sizing: border-box;
     border:3px solid green;
     flex-grow:0;
@@ -130,4 +148,46 @@ body > section{
     min-width: 200px;
     max-width: 30%;
     display: inline-block;
+}
+
+.dark-section{
+    background-color: #2E2C2F;
+    color: #F3E8EE;
+    height:100vh;
+}
+
+.dark-section-area{
+    border: 1px solid #F3E8EE;
+    /* color: #F3E8EE; */
+    height: 60vh;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    padding-top:5vh;
+    padding-bottom: 5vh;
+    gap:3vh
+}
+
+.dark-section-area > .dark-section-content{
+    border: 1px solid red;
+    /* flex: 1 1 auto; */
+    box-sizing: border-box;
+    min-width: 200px;
+    width: 60%;
+}
+
+.dark-section-area > .dark-section-img{
+    box-sizing: border-box;
+    border:3px solid green;
+    flex-grow:0;
+    flex-shrink: 0;
+    flex-basis: 0;
+    min-width: 200px;
+    max-width: 30%;
+    display: inline-block;
+}
+
+.projects-area{
+    border:1px solid white;
+    height:80vh;
 }
