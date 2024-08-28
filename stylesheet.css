@@ -79,15 +79,20 @@ a:link{
     justify-content: center;
     padding-top: 10vh;
     padding-bottom: 10vh;
-    gap:3vh
+    gap:3vh;
+    min-width: 400px;
 }
 
 .introduction-area > .introduction-area-content{
     border: 1px solid red;
     /* flex: 1 1 auto; */
     box-sizing: border-box;
-    min-width: 200px;
+    min-width: 300px;
     width: 60%;
+}
+
+.introduction-area-content > div{
+    border: 5px solid black;
 }
 
 .introduction-area > .introduction-area-picture{
@@ -96,7 +101,7 @@ a:link{
     flex-grow:0;
     flex-shrink: 0;
     flex-basis: 0;
-    min-width: 200px;
+    min-width: 300px;
     max-width: 30%;
     display: inline-block;
 }
@@ -191,3 +196,24 @@ a:link{
     border:1px solid white;
     height:80vh;
 }
+
+/* Animations */
+.hidden {
+    opacity:0;
+  }
+.console-container {
+ 
+    font-family:Aragandir-GrandLight;
+    font-size:2em;
+    text-align:left;
+    color:white;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+  }
+  .console-underscore {
+    top:-0.14em;
+    left:10px;
+  }
