@@ -12,9 +12,21 @@
     src:url(Agrandir/Agrandir-Regular.otf); */
 }
 
+@font-face {
+    font-family: Aragandir-GrandHeavy;
+    src:url(Agrandir/Agrandir-GrandHeavy.otf);
+}
+
 @media(max-width: 600px){
     html{
-        font-size: 12px;
+        font-size: 11px;
+    }
+}
+
+@media(max-width:300px){
+    body > section > div{
+        padding-left: 1vh;
+        padding-right:1vh;
     }
 }
 
@@ -61,9 +73,6 @@ body > section{
     color:#F3E8EE;
 }
 
-a:link{
-    text-decoration: none;
-}
 
 .introduction-section{
     /* padding-top: 1vh; */
@@ -80,30 +89,32 @@ a:link{
     padding-top: 10vh;
     padding-bottom: 10vh;
     gap:3vh;
-    min-width: 400px;
+    min-width: 375px;
 }
 
 .introduction-area > .introduction-area-content{
     border: 1px solid red;
     /* flex: 1 1 auto; */
     box-sizing: border-box;
-    min-width: 300px;
+    min-width: 200px;
     width: 60%;
 }
 
-.introduction-area-content > div{
-    border: 5px solid black;
+.introduction-area-content-body > h3{
+    line-height: 1.2 rem;
+    letter-spacing: .2rem;
 }
 
 .introduction-area > .introduction-area-picture{
     box-sizing: border-box;
     border:3px solid green;
-    flex-grow:0;
-    flex-shrink: 0;
-    flex-basis: 0;
-    min-width: 300px;
+    flex-grow:1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    min-width: 150px;
     max-width: 30%;
     display: inline-block;
+    max-height: 100%
 }
 
 .introduction-area > .introduction-area-picture > img{
@@ -202,9 +213,9 @@ a:link{
     opacity:0;
   }
 .console-container {
- 
-    font-family:Aragandir-GrandLight;
-    font-size:2em;
+    border: 5px solid black;
+    font-size:3rem;
+    font-weight: 500;
     text-align:left;
     color:white;
     top:0;
@@ -212,8 +223,94 @@ a:link{
     left:0;
     right:0;
     margin:auto;
+    margin-top: 4vw;
+    min-height: 10vh;
+    max-height: fit-content;
+    min-width: 100%;
+    margin-bottom: 4vh;
   }
   .console-underscore {
-    top:-0.14em;
-    left:10px;
+    /* top:-0.14em;
+    left:10px; */
+  }
+
+  /* Hover Animations */
+  a {
+    --color: #646b8c;
+
+    position: relative;
+    text-decoration: none;
+    color: var(--color);
+    font-family: Aragandir-GrandLight;
+    padding: 0.2rem 0;
+
+    &::before {
+        --line-width: 115%;
+        --line-height: 1px;
+        --line-easing: ease;
+        --line-transition-duration: 300ms;
+
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: var(--line-width);
+        height: var(--line-height);
+        transform-origin: right;
+        transform: scaleX(0);
+        background: var(--color);
+        transition: transform var(--line-transition-duration) var(--line-easing);
+        z-index: 1;
+    }
+
+    &:hover {
+        &::before {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+        span {
+            --deg: -45deg;
+            &::before {
+                transform: rotate(var(--deg));
+            }
+            &::after {
+                transform: translateX(-1px) rotate(var(--deg));
+            }
+        }
+    }
+
+    span {
+        --line-arrow-width: 1px;
+        --line-arrow-height: 6px;
+        --line-arrow-easing: cubic-bezier(0.3, 1.5, 0.5, 1);
+        --line-arrow-transition-duration: 200ms;
+        --line-arrow-transition-delay: 240ms;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            right: -18%;
+            bottom: 0px;
+            background: var(--color);
+            transition: transform var(--line-arrow-transition-duration)
+                var(--line-arrow-easing);
+            transition-delay: var(--line-arrow-transition-delay);
+            z-index: 2;
+        }
+
+        &::before {
+            width: var(--line-arrow-width);
+            height: var(--line-arrow-height);
+            transform-origin: 0% 100%;
+            transform: rotate(-90deg);
+        }
+
+        &::after {
+            height: var(--line-arrow-width);
+            width: var(--line-arrow-height);
+            transform-origin: 100% 0%;
+            transform: translateX(-1px) rotate(0deg);
+        }
+    }
   }

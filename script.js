@@ -1,5 +1,5 @@
 
-consoleText(['Hello World.', 'Welcome!', 'Made with Love.'], 'text',['#F3E8EE']);
+consoleText(['Hello, World!', 'Welcome!', 'Chill out'], 'text',['#F3E8EE']);
 
 document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.nav-bar');
