@@ -75,3 +75,14 @@ function consoleText(words, id, colors) {
       }
     }, 400)
   }
+
+  let img = document.querySelectorAll('.introduction-area-picture img');
+
+  for (var i = 0; i < img.length; i++) {
+       img[i].addEventListener('mouseover', hover);
+       img[i].addEventListener('mouseout', leave);
+  }
+  
+  
+  function hover(e) { e.target.src = e.target.getAttribute("data-hover-img"); }
+  function leave(e) { e.target.src = e.target.getAttribute("data-leave-img"); }
