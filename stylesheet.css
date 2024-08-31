@@ -137,11 +137,23 @@ body > section{
 
 }
 
-.separator{
+.separator-works{
     /* border:1px solid red; */
+    padding-top:3vh;
+    background-color: #F3E8EE;
     text-align: center;
     height: 10vh;
     line-height: 12vh;
+}
+
+.separator-internships{
+    /* border:1px solid red; */
+    padding-top:3vh;
+    background-color: #2E2C2F;
+    text-align: center;
+    height: 10vh;
+    line-height: 12vh;
+    color: #F3E8EE;
 }
 
 .light-section{
@@ -150,35 +162,43 @@ body > section{
 
 .light-section-area{
     border: 1px solid #2E2C2F;
-    color:#2E2C2F;
-    /* min-height: 100vh; */
+    /* color: #F3E8EE; */
+    min-height: 70vh;
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: center;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    gap:2vh
+    padding-top:5vh;
+    padding-bottom: 5vh;
+    gap:3vh
 }
 
 .light-section-area > .light-section-content{
     border: 1px solid red;
-    /* flex: 1 1 auto; */
-    box-sizing: border-box;
+    flex: 1 1 auto;
     min-width: 200px;
-    /* width: 60%; */
+    width: 50%;
+    box-sizing: border-box;
+    align-self: center;
+    margin: 1vh 1vw 1vh 2vw
 }
-
-
 
 .light-section-area > .light-section-img{
     box-sizing: border-box;
+    display: flex;
     border:3px solid green;
-    flex-grow:0;
-    flex-shrink: 0;
-    flex-basis: 0;
     min-width: 200px;
     max-width: 30%;
-    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    align-self: center;
+    margin: 1vh 2vw 1vh 1vw;
+}
+
+.light-section-area> .light-section-img > img{
+    min-width: 100%;
+    max-width: 100%;
+    display: block;
 }
 
 .dark-section{
@@ -196,7 +216,7 @@ body > section{
     justify-content: center;
     padding-top:5vh;
     padding-bottom: 5vh;
-    gap:3vh
+    /* gap:3vh */
 }
 
 .dark-section-area > .dark-section-content{
@@ -206,7 +226,7 @@ body > section{
     width: 50%;
     box-sizing: border-box;
     align-self: center;
-    margin: 1vh 1vw 1vh 2vw
+    margin: 1vh 1vw 1vh 2vw;
 }
 
 .dark-section-content > h1{
@@ -220,7 +240,7 @@ li{
     line-height: 2rem;
     letter-spacing: .1rem;
     font-family: Aragandir-Regular;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
     margin-left: 3vw;
     /* min-width: 250px; */
@@ -241,7 +261,7 @@ h1{
     align-items: center;
     box-sizing: border-box;
     align-self: center;
-    margin: 1vh 2vw 1vh 1vw;
+    margin: 1vh 1vw 1vh 2vw;
 }
 
 .dark-section-area> .dark-section-img > img{
