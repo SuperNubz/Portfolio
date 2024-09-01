@@ -27,6 +27,16 @@
     src:url(Agrandir/Agrandir-WideLight.otf);
 }
 
+@font-face {
+    font-family: Aragandir-Narrow;
+    src:url(Agrandir/Agrandir-Narrow.otf);
+}
+
+@font-face {
+    font-family: Aragandir-TextBold;
+    src:url(Agrandir/Agrandir-TextBold.otf);
+}
+
 @media(max-width: 600px){
     html{
         font-size: 12px;
@@ -60,6 +70,7 @@ body > section{
     position:fixed;
     width: 80vw;
     height: 3vh;
+    z-index: 3;
 }
 
 .nav-bar > .nav-bar-element{
@@ -137,6 +148,31 @@ body > section{
 
 }
 
+.sept-dark-1{
+    position: absolute;
+    top:228vh;
+    color: #F3E8EE;
+    background-color: #2E2C2F;
+    font-family: Aragandir-Regular;
+    font-size: 3rem;
+}
+
+.sept-light-1{
+    top:118vh;
+}
+
+.sept-light-2{
+    top:338vh;
+}
+
+.sept-light-1, .sept-light-2{
+    position: absolute;
+    color: #2E2C2F;
+    background-color: #F3E8EE;
+    font-family: Aragandir-Regular;
+    font-size: 3rem;
+}
+
 .separator-works{
     /* border:1px solid red; */
     padding-top:3vh;
@@ -173,7 +209,7 @@ body > section{
 }
 
 .light-section-area > .light-section-content{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     flex: 1 1 auto;
     min-width: 200px;
     width: 50%;
@@ -182,10 +218,14 @@ body > section{
     margin: 1vh 1vw 1vh 2vw
 }
 
+.light-section-content h1{
+    font-weight: 800;
+}
+
 .light-section-area > .light-section-img{
     box-sizing: border-box;
     display: flex;
-    border:3px solid green;
+    /* border:3px solid green; */
     min-width: 200px;
     max-width: 30%;
     justify-content: center;
@@ -233,7 +273,12 @@ body > section{
     line-height: 2rem;
     letter-spacing: .1rem;
     font-family: Aragandir-Regular;
+    font-size: 2rem;
     /* min-width: 250px; */
+}
+
+div div div h1{
+    font-family: Aragandir-Regular;
 }
 
 li{
@@ -254,7 +299,7 @@ h1{
 .dark-section-area > .dark-section-img{
     box-sizing: border-box;
     display: flex;
-    border:3px solid green;
+    /* border:3px solid green; */
     min-width: 200px;
     max-width: 30%;
     justify-content: center;
